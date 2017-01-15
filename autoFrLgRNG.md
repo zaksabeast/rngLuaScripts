@@ -6,10 +6,11 @@
   1. If you know the delay between using Pressing "A" to use Sweet Scent or to activate a Stationary/Legendary Pokemon battle, change "delayFrame" to equal the delay number
   2. If you don't know the delay, keep it at "0" and the script will figure it out automatically
   3. Edit "potentialoffset" to equal the potential amount of frames off your computer can be while attempting to RNG a Pokemon
-    1. Personally, since I mainly use wine with Linux, this can be quite a bit
-    2. As a general rule of thumb, for every 15,000 frames my wanted frame has, I add 1,000 to "potentialoffset", so if I'm aiming for frame 60000, I set "potentialoffset" to equal 4000
-    3. In other words, wantedFrame/15 = "potentialoffset"
-    4. Of course, this can change depending on your computer
+    1. This is used if the PID hit by the script was wrong, and it needs to try again
+    2. Personally, since I mainly use wine with Linux, this can be quite a bit
+      * As a general rule of thumb, for every 15,000 frames my wanted frame has, I add 1,000 to "potentialoffset", so if I'm aiming for frame 60000, I set "potentialoffset" to equal 4000
+      * In other words, wantedFrame/15 = "potentialoffset"
+      * Of course, this can change depending on your computer
 2. Edit "method" to equal "1" if you are RNGing a Method 1 Pokemon, or any other value for Method H-2 or Method H-4
 3. Create three empty files - "h2.csv", "h4.csv" and "1.csv" in the same directory as this script
   1. These correspond to the methods available for use with this script
