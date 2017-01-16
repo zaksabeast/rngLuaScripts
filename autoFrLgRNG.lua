@@ -30,7 +30,7 @@ function closestTo(goal, num1, num2)
     end
 end
 
-function csvToArray(fileName, method)
+function csvToArray(fileName, method, reporter)
     local keysTxt=io.open(fileName, "r")
     local targetList = newAutotable(2)
     local line=1
@@ -135,10 +135,10 @@ local hidpowbase, hidpowtype
 local i
 local h2List, h4List, method1List
 if(method~=1) then
-    h2List = csvToArray("h2.csv", 2)
-    h4List = csvToArray("h4.csv", 4)
+    h2List = csvToArray("h2.csv", 2, reporter)
+    h4List = csvToArray("h4.csv", 4, reporter)
 else
-    method1List = csvToArray("1.csv", 1) 
+    method1List = csvToArray("1.csv", 1, reporter) 
 end
 local targetList = csvToArray("target.csv")
 local joypress={}
