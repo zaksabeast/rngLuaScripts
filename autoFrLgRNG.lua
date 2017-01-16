@@ -1,10 +1,12 @@
 -- If delayFrame=0, the script will attempt to find the delay itself
 -- If method=1, then 1.csv will be read, any other value will use h2.csv and h4.csv
+-- Set reporter to either "9.96.6-beta" if you are using that version with Windows or "9.93-beta" for use with Linux and Mac with Wine, or that version with Windows.
 
 -- MAKE EDITS HERE
 local delayFrame=0
 local potentialoffset = 1000
 local method = 2
+local reporter = "9.96.6-beta"
 -- DON'T EDIT PAST HERE
 
 -- Thanks to http://stackoverflow.com/a/5032014 for string:split
@@ -34,9 +36,9 @@ function csvToArray(fileName, method)
     local line=1
     local row=1
     local pidCol
-    if(method~=1) then
+    if(method~=1) or  (reporter=="9.96.6-beta") then
         pidCol = 5
-    else
+    elseif (reporter=="9.93-beta") then
         pidCol = 4
     end
     for keyLine in keysTxt:lines() do
