@@ -11,6 +11,9 @@
       * As a general rule of thumb, for every 15,000 frames my wanted frame has, I add 1,000 to "potentialoffset", so if I'm aiming for frame 60000, I set "potentialoffset" to equal 4000
       * In other words, wantedFrame/15 = "potentialoffset"
       * Of course, this can change depending on your computer
+  4. Edit "reporter" to match the version of RNG Reporter you are using
+    * "9.96.6-beta" if you are on Windows (and have that version of rng reporter)
+    * "9.93-beta" if you are using Wine with Linux and Mac, or have this version on Windows
 2. Edit "method" to equal "1" if you are RNGing a Method 1 Pokemon, or any other value for Method H-2 or Method H-4
 3. Create three empty files - "h2.csv", "h4.csv" and "1.csv" in the same directory as this script
   1. These correspond to the methods available for use with this script
